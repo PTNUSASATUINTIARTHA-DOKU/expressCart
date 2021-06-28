@@ -1,0 +1,21 @@
+<form action="{{@root.paymentConfig.doku.environment}}" method="POST" id="doku-form">
+    <div id="doku-frame"></div>
+    <input type="hidden" name="MALLID" value="{{@root.paymentConfig.doku.mallId}}">
+    <input type="hidden" name="CHAINMERCHANT" value="NA">
+    <input type="hidden" name="AMOUNT" id = "amount">
+    <input type="hidden" name="PURCHASEAMOUNT" id = "purchaseAmount">
+    <input type="hidden" name="TRANSIDMERCHANT" id="transIdMerchant">
+    <input type="hidden" name="WORDS" id="words">
+    <input type="hidden" name="REQUESTDATETIME" id="requestDateTime">
+    <input type="hidden" name="CURRENCY" value="{{@root.paymentConfig.doku.currencyNum}}">
+    <input type="hidden" name="PURCHASECURRENCY" value="{{@root.paymentConfig.doku.currencyNum}}">
+    <input type="hidden" name="SESSIONID" id="sessionId">
+    <input type="hidden" name="NAME" value="{{@root.session.customerFirstname}} {{@root.session.customerLastname}}">
+    <input type="hidden" name="EMAIL" value="{{@root.session.customerEmail}}">
+    <input type="hidden" name="BASKET" id="basket">
+
+    <div class="doku_button">
+        <div class="mb-2">{{@root.paymentConfig.doku.description}}</div>
+        <button id="doku_checkout" class="btn btn-outline-success waves-effect waves-light blue darken-3" type="submit">Pay with DOKU</button>
+    </div>
+</form>

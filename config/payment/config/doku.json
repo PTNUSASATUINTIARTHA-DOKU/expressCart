@@ -1,0 +1,7 @@
+{
+    "description": "Pay with DOKU",
+    "environment": "https://staging.doku.com/Suite/Receive",
+    "mallId": "11580240",
+    "sharedKey": "s7s8L8L5k2x3",
+    "currencyNum": "598"
+}

@@ -1,0 +1,27 @@
+{
+    "properties": {
+        "description": {
+            "type": "string"
+        },
+        "environment": {
+            "type": "string"
+        },
+        "mallId": {
+            "type": "string"
+        },
+        "sharedKey": {
+            "type": "string"
+        },
+        "currencyNum": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "description",
+        "environment",
+        "mallId",
+        "sharedKey",
+        "currencyNum"
+    ],
+    "additionalProperties": false
+}

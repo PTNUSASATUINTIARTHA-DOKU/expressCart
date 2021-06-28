@@ -145,6 +145,25 @@ $(document).ready(function (){
             }
         });
     };
+
+    $('#doku_checkout').on('click', function(e){
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: '/doku/generate'
+        }).done((response) => {
+            $('#transIdMerchant').val(response.transIdMerchant);
+            $('#words').val(response.words);
+            $('#requestDateTime').val(response.requestDateTime);
+            $('#sessionId').val(response.sessionId);
+            $('#amount').val(response.amount);
+            $('#purchaseAmount').val(response.amount);
+            $('#basket').val(response.basket);
+            $('#doku-form').submit();
+        }).fail((response) => {
+            alert(response.err);
+        });
+    });
 });
 
 // show notification popup
